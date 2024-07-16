@@ -10,7 +10,7 @@ Meteor.startup(() => {
 
 Meteor.publish('posts', function(count) {
   console.log('Publishing posts with count', count);
-  return Posts.find({});
+  return Posts.find({}, { limit : count });
 });
 
 if (!await Posts.find().countAsync()) {

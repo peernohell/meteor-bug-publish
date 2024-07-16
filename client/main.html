@@ -2,5 +2,5 @@
 </head>
 
 <body>
-  <button onclick="Session.set('refreshId', Random.id())">refresh</button>
+  <button onclick="Session.set('refreshId', 1+ Session.get('refreshId'))">refresh</button>
 </body>
